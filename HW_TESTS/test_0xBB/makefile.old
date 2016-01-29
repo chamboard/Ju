@@ -1,0 +1,8 @@
+SRC		=	main.c
+
+RM		=	rm -f
+
+OBJ		=	$(SRC:.c=.o)
+
+test_0xBB:
+	gcc -rdynamic -o test_0xBB main.c -lm -mfloat-abi=hard -mfpu=vfp -Wall -lrt `chantilly --bp`
